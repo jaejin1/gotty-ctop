@@ -1,0 +1,11 @@
+version: '3'
+services:
+  gotty-ctop:
+    image: jaejin1/ctop:latest
+    container_name: gotty-ctop
+    tty: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - '8080:8080'
+    command: gotty -w ctop
